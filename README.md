@@ -4,13 +4,34 @@ kOpenRay is a fork of _[jOpenRay](http://www.jopenray.org/)_, an open-source Jav
 
 Like jOpenRay, kOpenRay runs anywhere Java does (including Windows, macOS, Linux and Solaris), and is free and open-source under the GNU Public License. This version of kOpenRay is only suitable for exploratory use on a secured LAN and should not be used on a production external-facing interface.
 
+## What does that mean?
+
+
+## Alternatives
+[Apache Guacamole](https://guacamole.apache.org/)
+
 ## How to build
 
 Building requires a 1.8-compatible JDK or later, though 1.6 should still work, and Apache Ant. Just type `make` and the build is deposited in `dist/`.
 
 ## How to get your SunRays talking to it
 
-See `README.md` in `assets/` (or in any release build).
+See [README.md](assets/README.md) in [assets/](assets) (or in any release build).
+
+## Supported Clients
+1. Sun Ray 1 - ?
+1. Sun Ray 2 - ?
+1. Sun Ray 3 - ?
+1. Software Clients - None
+
+## [Session Types](jopenray/src/org/jopenray/server/session/Session.java)
+![Sessions](assets/Images/Sessions.png)
+
+1. RDP - untested [adapter](jopenray/src/org/jopenray/adapter/RDPAdapter.java) [src](jopenray/src/org/jopenray/rdp)
+2. RFB - disabled [adapter](jopenray/src/org/jopenray/adapter/RFBAdapter.java) [src](jopenray/src/org/jopenray/rfb)
+3. Image - [src](jopenray/src/org/jopenray/server/thinclient/ThinClient.java)
+4. SSH - [adapter](jopenray/src/org/jopenray/adapter/SSHAdapter.java)
+5. Tetpnc - [src](jopenray/src/org/jopenray/server/thinclient/ThinClient.java)
 
 ## Current version
 
